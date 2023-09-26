@@ -1,0 +1,107 @@
+
+        body {
+            background-image: url(assets/banco-digital.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        #usuario{
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            box-shadow: inset;
+        }
+
+        #contrasena{
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            box-shadow: inset;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            padding: 10px 20px;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .input-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        body::before {
+            content: "";
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+        }
+
+        /* Estilos para la barra de navegación */
+        .navbar {
+            background-color: #000; /* Fondo negro */
+            color: #fff; /* Texto blanco */
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+            width: 100%;
+        }
+
+        /* Estilos para el logo */
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Estilos para los íconos */
+        .fa-user,
+        .fa-github {
+            font-size: 24px;
+            margin-right: 5px;
+        }
+
+        .navbar-icons{
+            margin: 20px;
+            display: flex;
+            justify-content: space-around;
+            width: 200px;
+            align-items: center;
+            color: #4c0999f3;
+        }

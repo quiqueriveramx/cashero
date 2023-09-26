@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0809707797.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style-cajero.css">
+    <script src="./app-cajero.js"></script>
+
+    <title>Mi Cajero Automático</title>
+
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-logo">
+            <i class="fas fa-university"></i> Cashero
+        </div>
+        <div class="navbar-icons">
+            <a href="#"><i class="fas fa-user"></i></a>
+            <a href="#"><i class="fas fa-clipboard-list"></i></a>
+            <a href="https://github.com/quiqueriveramx" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+
+    <h1>Mi Cajero Automático</h1>
+
+    <!-- Contenedor para mostrar opciones de cuentas DEMO -->
+    <section class="cuentas-demo">
+        <!-- Tus elementos aquí... -->
+    </section>
+
+    <!-- Información del usuario -->
+    <div id="infoUsuario"></div>
+
+    <!-- Contenedor para la entrada de datos -->
+    <section id="inputContainerOperacion" style="display: none;">
+        <div id="inputMensaje"></div>
+        <input type="number" id="monto" placeholder="Ingrese el monto">
+        <button onclick="realizarOperacion()">Realizar Operación</button>
+    </section>
+
+    <h2>¿Qué operación deseas realizar?</h2>
+
+    <div class="opciones">
+        <div class="opcion" id="mensajeSaldo" onclick="consultarSaldo()">Consultar Saldo</div>
+        <div class="opcion" id="mensajeDeposito" onclick="mostrarInput('Depósito')">Realizar Depósito</div>
+        <div class="opcion" id="mensajeRetiro" onclick="mostrarInput('Retiro')">Realizar Retiro</div>
+        <div class="opcion" id="botonSalir" onclick="exit()">Salir</div>
+    </div>
+
+    <div class="saldo-container" style="display: none;">
+        <div id="saldoActualizado"></div>
+    </div>
+
+    <div class="mensaje-container" style="display: none;">
+        <div id="mensajeOperacion"></div>
+    </div>
+</body>
+</html>

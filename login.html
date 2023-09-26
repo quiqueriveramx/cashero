@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0809707797.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="./app.js"></script>
+
+    <title>Simulador de Cajero Automático</title>
+    
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-logo">
+            <i class="fas fa-university"></i> Cashero
+        </div>
+        <div class="navbar-icons">
+            <a href="#"><i class="fas fa-user"></i></a>
+            <a href="#"><i class="fas fa-clipboard-list"></i></a>
+            <a href="https://github.com/quiqueriveramx" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+
+    <h1>Mi cajero automático</h1>
+
+    <!-- Campos para iniciar sesión o recuperar contraseña -->
+    <section id="loginContainer">
+        <input type="text" id="usuario" placeholder="Usuario"><br>
+        <input type="password" id="contrasena" placeholder="Contraseña"><br>
+        <button onclick="iniciarSesion()">Iniciar Sesión</button>
+        <button onclick="recuperarPassword()">Recuperar Contraseña</button>
+        <button id="botonRegistro" onclick="mostrarRegistro()">Registro</button>
+        <!-- Agregar el botón DEMO -->
+        <button onclick="cargarDemo()">DEMO</button>
+    </section>
+
+    <!-- Contenedor para mostrar mensaje de recuperación de contraseña -->
+    <section class="mensaje" id="mensajeRecuperacion"></section>
+
+    <!-- Sección para el registro de usuario -->
+    <section id="registerContainer" style="display: none;">
+        <input type="text" id="registroUsuario" placeholder="Nuevo Usuario"><br>
+        <input type="password" id="registroContrasena" placeholder="Nueva Contraseña"><br>
+        <button onclick="registrarUsuario()">Registrar</button>
+        <button onclick="recuperarPassword()">Recuperar Contraseña</button>
+        <button onclick="cargarDemo()">DEMO</button>
+    </section>
+
+    <!-- Contenedor para mostrar opciones de cuentas DEMO -->
+    <section class="cuentas-demo" style="display: none;">
+        <h2>Selecciona una cuenta de demostración:</h2>
+        <div class="cuenta-demo" onclick="seleccionarCuentaDemo(0)">Mali - Saldo: $200</div>
+        <div class="cuenta-demo" onclick="seleccionarCuentaDemo(1)">Gera - Saldo: $290</div>
+        <div class="cuenta-demo" onclick="seleccionarCuentaDemo(2)">Maui - Saldo: $67</div>
+    </section>
+    
+</body>
+</html>

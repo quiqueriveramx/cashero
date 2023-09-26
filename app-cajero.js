@@ -91,5 +91,5 @@
 
         function exit() {
             alert("Gracias por usar el simulador de cajero automático. Hasta luego.");
-            window.location.href = "./login.html";
+            window.location.href = "./index.html";
         }

@@ -27,7 +27,7 @@ h2 {
 
 /* Estilos para la barra de navegación */
 .navbar {
-    background-color: #000; /* Fondo negro */
+    background-color: #ebebeb; /* Fondo negro */
     color: #fff; /* Texto blanco */
     display: flex;
     justify-content: space-around;

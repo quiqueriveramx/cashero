@@ -29,22 +29,29 @@
 
         function realizarOperacion() {
             const operacion = document.getElementById("inputMensaje").textContent;
-
+        
             switch (operacion) {
                 case 'Depósito':
                     const montoDeposito = parseFloat(document.getElementById("monto").value);
                     if (!isNaN(montoDeposito) && montoDeposito > 0) {
-                        saldo += montoDeposito;
-                        mostrarMensaje(`Has depositado $${montoDeposito}. Tu saldo actual es: $${saldo.toFixed(2)}.`);
-                        actualizarURL();
+                        // Validar el saldo después del depósito
+                        const nuevoSaldo = saldo + montoDeposito;
+                        if (nuevoSaldo <= 990) {
+                            saldo = nuevoSaldo;
+                            mostrarMensaje(`Has depositado $${montoDeposito}. Tu saldo actual es: $${saldo.toFixed(2)}.`);
+                            actualizarURL();
+                        } else {
+                            mostrarMensaje("El saldo máximo permitido es de $990.");
+                        }
                     } else {
                         mostrarMensaje("Por favor, ingrese un monto válido.");
                     }
                     break;
-
+        
                 case 'Retiro':
                     const montoRetiro = parseFloat(document.getElementById("monto").value);
                     if (!isNaN(montoRetiro) && montoRetiro > 0) {
+                        // Validar el saldo después del retiro
                         if (montoRetiro <= saldo) {
                             saldo -= montoRetiro;
                             mostrarMensaje(`Has retirado $${montoRetiro}. Tu saldo actual es: $${saldo.toFixed(2)}.`);
@@ -56,12 +63,12 @@
                         mostrarMensaje("Por favor, ingrese un monto válido.");
                     }
                     break;
-
+        
                 default:
                     mostrarMensaje(""); // No mostrar mensaje por defecto
                     break;
             }
-
+        
             // Permitir realizar más operaciones después de esta
             document.getElementById("monto").value = "";
             operacionRealizada = false;
